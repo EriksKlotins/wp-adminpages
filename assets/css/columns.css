@@ -1,0 +1,36 @@
+/**
+* if IN METABOX 2 column layout needed
+*/
+.form-wrap.two-columns .form-field { width: 50%; float: left; }
+
+
+
+.form-wrap h3, .form-wrap .submit { clear: both; }
+
+/** 
+* even columns
+*/
+.col1 .column { width: 100%; }
+
+.col2 .column { width: 50%; }
+
+.col3 .column { width: 33.33333%; }
+
+.col4 .column { width: 25%; }
+
+.col5 .column { width: 20%; }
+
+.col6 .column { width: 16.66667%; }
+
+.col7 .column { width: 14.28571%; }
+
+.col8 .column { width: 12.5%; }
+
+/** 
+* colons based on ratio
+*/
+.col1-2 .column:nth-child(1) { width: 66.66667%; }
+.col1-2 .column:nth-child(2) { width: 33.33333%; }
+
+.col2-1 .column:nth-child(1) { width: 33.33333%; }
+.col2-1 .column:nth-child(2) { width: 66.66667%; }

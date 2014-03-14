@@ -1,0 +1,475 @@
+<?php
+
+
+class FA
+{
+
+/**
+ * Konstantes FontAwesome ikonām
+ */
+const BARS='fa-bars';
+const FLAG='fa-flag';
+const CARET_DOWN='fa-caret-down';
+const RUB='fa-rub';
+const CAMERA_RETRO='fa-camera-retro';
+const CHECK_SQUARE='fa-check-square';
+const WON='fa-won';
+const FILE_TEXT_O='fa-file-text-o';
+const HAND_O_RIGHT='fa-hand-o-right';
+const PLAY_CIRCLE='fa-play-circle';
+const GITHUB='fa-github';
+const MEDKIT='fa-medkit';
+const RUBLE='fa-ruble';
+const ROUBLE='fa-rouble';
+const PAGELINES='fa-pagelines';
+const STACK_EXCHANGE='fa-stack-exchange';
+const ARROW_CIRCLE_O_RIGHT='fa-arrow-circle-o-right';
+const ARROW_CIRCLE_O_LEFT='fa-arrow-circle-o-left';
+const CARET_SQUARE_O_LEFT='fa-caret-square-o-left';
+const TOGGLE_LEFT='fa-toggle-left';
+const DOT_CIRCLE_O='fa-dot-circle-o';
+const WHEELCHAIR='fa-wheelchair';
+const VIMEO_SQUARE='fa-vimeo-square';
+const FA_TRY='fa-try';
+const TURKISH_LIRA='fa-turkish-lira';
+const PLUS_SQUARE_O='fa-plus-square-o';
+const ADJUST='fa-adjust';
+const ANCHOR='fa-anchor';
+const ARCHIVE='fa-archive';
+const ARROWS='fa-arrows';
+const ARROWS_H='fa-arrows-h';
+const ARROWS_V='fa-arrows-v';
+const ASTERISK='fa-asterisk';
+const BAN='fa-ban';
+const BAR_CHART_O='fa-bar-chart-o';
+const BARCODE='fa-barcode';
+const BEER='fa-beer';
+const BELL='fa-bell';
+const BELL_O='fa-bell-o';
+const BOLT='fa-bolt';
+const BOOK='fa-book';
+const BOOKMARK='fa-bookmark';
+const BOOKMARK_O='fa-bookmark-o';
+const BRIEFCASE='fa-briefcase';
+const BUG='fa-bug';
+const BUILDING_O='fa-building-o';
+const BULLHORN='fa-bullhorn';
+const BULLSEYE='fa-bullseye';
+const CALENDAR='fa-calendar';
+const CALENDAR_O='fa-calendar-o';
+const CAMERA='fa-camera';
+const CARET_SQUARE_O_DOWN='fa-caret-square-o-down';
+const CARET_SQUARE_O_RIGHT='fa-caret-square-o-right';
+const CARET_SQUARE_O_UP='fa-caret-square-o-up';
+const CERTIFICATE='fa-certificate';
+const CHECK='fa-check';
+const CHECK_CIRCLE='fa-check-circle';
+const CHECK_CIRCLE_O='fa-check-circle-o';
+const CHECK_SQUARE_O='fa-check-square-o';
+const CIRCLE='fa-circle';
+const CIRCLE_O='fa-circle-o';
+const CLOCK_O='fa-clock-o';
+const CLOUD='fa-cloud';
+const CLOUD_DOWNLOAD='fa-cloud-download';
+const CLOUD_UPLOAD='fa-cloud-upload';
+const CODE='fa-code';
+const CODE_FORK='fa-code-fork';
+const COFFEE='fa-coffee';
+const COG='fa-cog';
+const COGS='fa-cogs';
+const COMMENT='fa-comment';
+const COMMENT_O='fa-comment-o';
+const COMMENTS='fa-comments';
+const COMMENTS_O='fa-comments-o';
+const COMPASS='fa-compass';
+const CREDIT_CARD='fa-credit-card';
+const CROP='fa-crop';
+const CROSSHAIRS='fa-crosshairs';
+const CUTLERY='fa-cutlery';
+const DASHBOARD='fa-dashboard';
+const DESKTOP='fa-desktop';
+const DOWNLOAD='fa-download';
+const EDIT='fa-edit';
+const ELLIPSIS_H='fa-ellipsis-h';
+const ELLIPSIS_V='fa-ellipsis-v';
+const ENVELOPE='fa-envelope';
+const ENVELOPE_O='fa-envelope-o';
+const ERASER='fa-eraser';
+const EXCHANGE='fa-exchange';
+const EXCLAMATION='fa-exclamation';
+const EXCLAMATION_CIRCLE='fa-exclamation-circle';
+const EXCLAMATION_TRIANGLE='fa-exclamation-triangle';
+const EXTERNAL_LINK='fa-external-link';
+const EXTERNAL_LINK_SQUARE='fa-external-link-square';
+const EYE='fa-eye';
+const EYE_SLASH='fa-eye-slash';
+const FEMALE='fa-female';
+const FIGHTER_JET='fa-fighter-jet';
+const FILM='fa-film';
+const FILTER='fa-filter';
+const FIRE='fa-fire';
+const FIRE_EXTINGUISHER='fa-fire-extinguisher';
+const FLAG_CHECKERED='fa-flag-checkered';
+const FLAG_O='fa-flag-o';
+const FLASH='fa-flash';
+const FLASK='fa-flask';
+const FOLDER='fa-folder';
+const FOLDER_O='fa-folder-o';
+const FOLDER_OPEN='fa-folder-open';
+const FOLDER_OPEN_O='fa-folder-open-o';
+const FROWN_O='fa-frown-o';
+const GAMEPAD='fa-gamepad';
+const GAVEL='fa-gavel';
+const GEAR='fa-gear';
+const GEARS='fa-gears';
+const GIFT='fa-gift';
+const GLASS='fa-glass';
+const GLOBE='fa-globe';
+const GROUP='fa-group';
+const HDD_O='fa-hdd-o';
+const HEADPHONES='fa-headphones';
+const HEART='fa-heart';
+const HEART_O='fa-heart-o';
+const HOME='fa-home';
+const INBOX='fa-inbox';
+const INFO='fa-info';
+const INFO_CIRCLE='fa-info-circle';
+const KEY='fa-key';
+const KEYBOARD_O='fa-keyboard-o';
+const LAPTOP='fa-laptop';
+const LEAF='fa-leaf';
+const LEGAL='fa-legal';
+const LEMON_O='fa-lemon-o';
+const LEVEL_DOWN='fa-level-down';
+const LEVEL_UP='fa-level-up';
+const LIGHTBULB_O='fa-lightbulb-o';
+const LOCATION_ARROW='fa-location-arrow';
+const LOCK='fa-lock';
+const MAGIC='fa-magic';
+const MAGNET='fa-magnet';
+const MAIL_FORWARD='fa-mail-forward';
+const MAIL_REPLY='fa-mail-reply';
+const MAIL_REPLY_ALL='fa-mail-reply-all';
+const MALE='fa-male';
+const MAP_MARKER='fa-map-marker';
+const MEH_O='fa-meh-o';
+const MICROPHONE='fa-microphone';
+const MICROPHONE_SLASH='fa-microphone-slash';
+const MINUS='fa-minus';
+const MINUS_CIRCLE='fa-minus-circle';
+const MINUS_SQUARE='fa-minus-square';
+const MINUS_SQUARE_O='fa-minus-square-o';
+const MOBILE='fa-mobile';
+const MOBILE_PHONE='fa-mobile-phone';
+const MONEY='fa-money';
+const MOON_O='fa-moon-o';
+const MUSIC='fa-music';
+const PENCIL='fa-pencil';
+const PENCIL_SQUARE='fa-pencil-square';
+const PENCIL_SQUARE_O='fa-pencil-square-o';
+const PHONE='fa-phone';
+const PHONE_SQUARE='fa-phone-square';
+const PICTURE_O='fa-picture-o';
+const PLANE='fa-plane';
+const PLUS='fa-plus';
+const PLUS_CIRCLE='fa-plus-circle';
+const PLUS_SQUARE='fa-plus-square';
+const POWER_OFF='fa-power-off';
+const FA_PRINT='fa-print';
+const PUZZLE_PIECE='fa-puzzle-piece';
+const QRCODE='fa-qrcode';
+const QUESTION='fa-question';
+const QUESTION_CIRCLE='fa-question-circle';
+const QUOTE_LEFT='fa-quote-left';
+const QUOTE_RIGHT='fa-quote-right';
+const RANDOM='fa-random';
+const REFRESH='fa-refresh';
+const REPLY='fa-reply';
+const REPLY_ALL='fa-reply-all';
+const RETWEET='fa-retweet';
+const ROAD='fa-road';
+const ROCKET='fa-rocket';
+const RSS='fa-rss';
+const RSS_SQUARE='fa-rss-square';
+const SEARCH='fa-search';
+const SEARCH_MINUS='fa-search-minus';
+const SEARCH_PLUS='fa-search-plus';
+const SHARE='fa-share';
+const SHARE_SQUARE='fa-share-square';
+const SHARE_SQUARE_O='fa-share-square-o';
+const SHIELD='fa-shield';
+const SHOPPING_CART='fa-shopping-cart';
+const SIGN_IN='fa-sign-in';
+const SIGN_OUT='fa-sign-out';
+const SIGNAL='fa-signal';
+const SITEMAP='fa-sitemap';
+const SMILE_O='fa-smile-o';
+const SORT='fa-sort';
+const SORT_ALPHA_ASC='fa-sort-alpha-asc';
+const SORT_ALPHA_DESC='fa-sort-alpha-desc';
+const SORT_AMOUNT_ASC='fa-sort-amount-asc';
+const SORT_AMOUNT_DESC='fa-sort-amount-desc';
+const SORT_ASC='fa-sort-asc';
+const SORT_DESC='fa-sort-desc';
+const SORT_DOWN='fa-sort-down';
+const SORT_NUMERIC_ASC='fa-sort-numeric-asc';
+const SORT_NUMERIC_DESC='fa-sort-numeric-desc';
+const SORT_UP='fa-sort-up';
+const SPINNER='fa-spinner';
+const SQUARE='fa-square';
+const SQUARE_O='fa-square-o';
+const STAR='fa-star';
+const STAR_HALF='fa-star-half';
+const STAR_HALF_EMPTY='fa-star-half-empty';
+const STAR_HALF_FULL='fa-star-half-full';
+const STAR_HALF_O='fa-star-half-o';
+const STAR_O='fa-star-o';
+const SUBSCRIPT='fa-subscript';
+const SUITCASE='fa-suitcase';
+const SUN_O='fa-sun-o';
+const SUPERSCRIPT='fa-superscript';
+const TABLET='fa-tablet';
+const TACHOMETER='fa-tachometer';
+const TAG='fa-tag';
+const TAGS='fa-tags';
+const TASKS='fa-tasks';
+const TERMINAL='fa-terminal';
+const THUMB_TACK='fa-thumb-tack';
+const THUMBS_DOWN='fa-thumbs-down';
+const THUMBS_O_DOWN='fa-thumbs-o-down';
+const THUMBS_O_UP='fa-thumbs-o-up';
+const THUMBS_UP='fa-thumbs-up';
+const TICKET='fa-ticket';
+const TIMES='fa-times';
+const TIMES_CIRCLE='fa-times-circle';
+const TIMES_CIRCLE_O='fa-times-circle-o';
+const TINT='fa-tint';
+const TOGGLE_DOWN='fa-toggle-down';
+const TOGGLE_RIGHT='fa-toggle-right';
+const TOGGLE_UP='fa-toggle-up';
+const TRASH_O='fa-trash-o';
+const TROPHY='fa-trophy';
+const TRUCK='fa-truck';
+const UMBRELLA='fa-umbrella';
+const UNLOCK='fa-unlock';
+const UNLOCK_ALT='fa-unlock-alt';
+const UNSORTED='fa-unsorted';
+const UPLOAD='fa-upload';
+const USER='fa-user';
+const USERS='fa-users';
+const VIDEO_CAMERA='fa-video-camera';
+const VOLUME_DOWN='fa-volume-down';
+const VOLUME_OFF='fa-volume-off';
+const VOLUME_UP='fa-volume-up';
+const WARNING='fa-warning';
+const WRENCH='fa-wrench';
+const BITCOIN='fa-bitcoin';
+const BTC='fa-btc';
+const CNY='fa-cny';
+const DOLLAR='fa-dollar';
+const EUR='fa-eur';
+const EURO='fa-euro';
+const GBP='fa-gbp';
+const INR='fa-inr';
+const JPY='fa-jpy';
+const KRW='fa-krw';
+const RMB='fa-rmb';
+const RUPEE='fa-rupee';
+const USD='fa-usd';
+const YEN='fa-yen';
+const ALIGN_CENTER='fa-align-center';
+const ALIGN_JUSTIFY='fa-align-justify';
+const ALIGN_LEFT='fa-align-left';
+const ALIGN_RIGHT='fa-align-right';
+const BOLD='fa-bold';
+const CHAIN='fa-chain';
+const CHAIN_BROKEN='fa-chain-broken';
+const CLIPBOARD='fa-clipboard';
+const COLUMNS='fa-columns';
+const COPY='fa-copy';
+const CUT='fa-cut';
+const DEDENT='fa-dedent';
+const FILE='fa-file';
+const FILE_O='fa-file-o';
+const FILE_TEXT='fa-file-text';
+const FILES_O='fa-files-o';
+const FLOPPY_O='fa-floppy-o';
+const FONT='fa-font';
+const INDENT='fa-indent';
+const ITALIC='fa-italic';
+const LINK='fa-link';
+const FA_LIST='fa-list';
+const LIST_ALT='fa-list-alt';
+const LIST_OL='fa-list-ol';
+const LIST_UL='fa-list-ul';
+const OUTDENT='fa-outdent';
+const PAPERCLIP='fa-paperclip';
+const PASTE='fa-paste';
+const REPEAT='fa-repeat';
+const ROTATE_LEFT='fa-rotate-left';
+const ROTATE_RIGHT='fa-rotate-right';
+const SAVE='fa-save';
+const SCISSORS='fa-scissors';
+const STRIKETHROUGH='fa-strikethrough';
+const TABLE='fa-table';
+const TEXT_HEIGHT='fa-text-height';
+const TEXT_WIDTH='fa-text-width';
+const TH='fa-th';
+const TH_LARGE='fa-th-large';
+const TH_LIST='fa-th-list';
+const UNDERLINE='fa-underline';
+const UNDO='fa-undo';
+const UNLINK='fa-unlink';
+const ANGLE_DOUBLE_DOWN='fa-angle-double-down';
+const ANGLE_DOUBLE_LEFT='fa-angle-double-left';
+const ANGLE_DOUBLE_RIGHT='fa-angle-double-right';
+const ANGLE_DOUBLE_UP='fa-angle-double-up';
+const ANGLE_DOWN='fa-angle-down';
+const ANGLE_LEFT='fa-angle-left';
+const ANGLE_RIGHT='fa-angle-right';
+const ANGLE_UP='fa-angle-up';
+const ARROW_CIRCLE_DOWN='fa-arrow-circle-down';
+const ARROW_CIRCLE_LEFT='fa-arrow-circle-left';
+const ARROW_CIRCLE_O_DOWN='fa-arrow-circle-o-down';
+const ARROW_CIRCLE_O_UP='fa-arrow-circle-o-up';
+const ARROW_CIRCLE_RIGHT='fa-arrow-circle-right';
+const ARROW_CIRCLE_UP='fa-arrow-circle-up';
+const ARROW_DOWN='fa-arrow-down';
+const ARROW_LEFT='fa-arrow-left';
+const ARROW_RIGHT='fa-arrow-right';
+const ARROW_UP='fa-arrow-up';
+const ARROWS_ALT='fa-arrows-alt';
+const CARET_LEFT='fa-caret-left';
+const CARET_RIGHT='fa-caret-right';
+const CARET_UP='fa-caret-up';
+const CHEVRON_CIRCLE_DOWN='fa-chevron-circle-down';
+const CHEVRON_CIRCLE_LEFT='fa-chevron-circle-left';
+const CHEVRON_CIRCLE_RIGHT='fa-chevron-circle-right';
+const CHEVRON_CIRCLE_UP='fa-chevron-circle-up';
+const CHEVRON_DOWN='fa-chevron-down';
+const CHEVRON_LEFT='fa-chevron-left';
+const CHEVRON_RIGHT='fa-chevron-right';
+const CHEVRON_UP='fa-chevron-up';
+const HAND_O_DOWN='fa-hand-o-down';
+const HAND_O_LEFT='fa-hand-o-left';
+const HAND_O_UP='fa-hand-o-up';
+const LONG_ARROW_DOWN='fa-long-arrow-down';
+const LONG_ARROW_LEFT='fa-long-arrow-left';
+const LONG_ARROW_RIGHT='fa-long-arrow-right';
+const LONG_ARROW_UP='fa-long-arrow-up';
+const BACKWARD='fa-backward';
+const COMPRESS='fa-compress';
+const EJECT='fa-eject';
+const EXPAND='fa-expand';
+const FAST_BACKWARD='fa-fast-backward';
+const FAST_FORWARD='fa-fast-forward';
+const FORWARD='fa-forward';
+const PAUSE='fa-pause';
+const PLAY='fa-play';
+const PLAY_CIRCLE_O='fa-play-circle-o';
+const STEP_BACKWARD='fa-step-backward';
+const STEP_FORWARD='fa-step-forward';
+const STOP='fa-stop';
+const YOUTUBE_PLAY='fa-youtube-play';
+const ADN='fa-adn';
+const ANDROID='fa-android';
+const APPLE='fa-apple';
+const BITBUCKET='fa-bitbucket';
+const BITBUCKET_SQUARE='fa-bitbucket-square';
+const CSS3='fa-css3';
+const DRIBBBLE='fa-dribbble';
+const DROPBOX='fa-dropbox';
+const FACEBOOK='fa-facebook';
+const FACEBOOK_SQUARE='fa-facebook-square';
+const FLICKR='fa-flickr';
+const FOURSQUARE='fa-foursquare';
+const GITHUB_ALT='fa-github-alt';
+const GITHUB_SQUARE='fa-github-square';
+const GITTIP='fa-gittip';
+const GOOGLE_PLUS='fa-google-plus';
+const GOOGLE_PLUS_SQUARE='fa-google-plus-square';
+const HTML5='fa-html5';
+const INSTAGRAM='fa-instagram';
+const LINKEDIN='fa-linkedin';
+const LINKEDIN_SQUARE='fa-linkedin-square';
+const LINUX='fa-linux';
+const MAXCDN='fa-maxcdn';
+const PINTEREST='fa-pinterest';
+const PINTEREST_SQUARE='fa-pinterest-square';
+const RENREN='fa-renren';
+const SKYPE='fa-skype';
+const STACK_OVERFLOW='fa-stack-overflow';
+const TRELLO='fa-trello';
+const TUMBLR='fa-tumblr';
+const TUMBLR_SQUARE='fa-tumblr-square';
+const TWITTER='fa-twitter';
+const TWITTER_SQUARE='fa-twitter-square';
+const VK='fa-vk';
+const WEIBO='fa-weibo';
+const WINDOWS='fa-windows';
+const XING='fa-xing';
+const XING_SQUARE='fa-xing-square';
+const YOUTUBE='fa-youtube';
+const YOUTUBE_SQUARE='fa-youtube-square';
+const AMBULANCE='fa-ambulance';
+const H_SQUARE='fa-h-square';
+const HOSPITAL_O='fa-hospital-o';
+const STETHOSCOPE='fa-stethoscope';
+const USER_MD='fa-user-md';
+
+
+	/**
+	 * Saforme un atgriež HTML ikonai
+	 * @param  string $icon    Ikona, izmantot konstanti
+	 * @param  array  $options 
+	 *         $size int 1-5 ikonas izmers
+	 *         
+	 *         
+	 * @return [type]          [description]
+	 */
+	public static function icon($icon, FontAwesomeIconConfigurationInterface $configuration = null)
+	{
+
+		if ($configuration === null) $configuration = new FontAwesomeIconConfiguration();
+
+		return sprintf('<i class="fa %s %s"></i>', $icon, $configuration->formatted());
+
+	}
+
+}
+
+interface FontAwesomeIconConfigurationInterface
+{
+	public function formatted();
+}
+
+class FontAwesomeIconConfiguration implements FontAwesomeIconConfigurationInterface
+{
+	protected $size = 1;
+	protected $fixedWidth = false;
+	protected $listIcon = false;
+	protected $border = false;
+	protected $spin = false;
+
+	public function __construct($size = 1, $fixedWidth = false, $listIcon = false, $border = false, $spin = false)
+	{
+		$this->size = $size;
+		$this->fixedWidth = $fixedWidth;
+		$this->listIcon = $listIcon;
+		$this->border = $border;
+		$this->spin = $spin;
+	}
+
+	public function formatted()
+	{
+
+		$params = [];
+		if($this->size != 1) $params[] = sprintf('fa-%d%s',  $this->size, $this->size === 1 ? 'g' : 'x');
+		if ($this->fixedWidth) $params[] = 'fa-fw';
+		if ($this->listIcon)$params[] = 'fa-li';
+		if ($this->border)$params[] = 'fa-border';
+		if ($this->spin)$params[] = 'fa-spin';
+
+		return implode(' ',$params);
+	}
+}

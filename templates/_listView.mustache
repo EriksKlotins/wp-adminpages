@@ -1,0 +1,143 @@
+<div class="wrap">
+
+	<!-- filtri -->
+	{{#has-filters}}
+	<ul class="subsubsub">
+		{{#filters}}
+		<li class="all"><a href="{{link}}" {{#is-current}}class="current"{{/is-current}}>{{title}} <span class="count">({{count}})</span></a> |</li>
+		{{/filters}}
+	</ul> 
+	{{/has-filters}}
+
+
+	<form id="posts-filter" action="{{search_action}}" method="get">
+		<!-- search box -->
+		<p class="search-box">
+			<label class="screen-reader-text" for="post-search-input">{{#labels}}{{search_items}}{{/labels}}:</label>
+			<input type="search" id="post-search-input" name="s" value="{{search}}">
+			{{#parameters}}
+			<input type="hidden" name="{{name}}" value="{{value}}">
+			{{/parameters}}
+			<input type="submit" name="" id="search-submit" class="button" value="{{#labels}}{{search_items}}{{/labels}}">
+		</p>
+
+		<!-- BULK actions -->
+		<div class="tablenav top">
+			{{#has-bulkActions}}
+			<div class="alignleft actions bulkactions">
+				<select name="action">
+					<option value="-1" selected="selected">{{labels.bulk_actions}}</option>
+					{{#bulkActions}}
+						<option value="{{key}}">{{title}}</option>
+					{{/bulkActions}}
+					</select>
+					<input type="submit" name="" id="doaction" class="button action" value="{{labels.apply}}">
+			</div>
+			{{/has-bulkActions}}
+
+			<!-- PAGINĀCIJA -->
+			<div class="tablenav-pages">
+				<span class="displaying-num">{{count}} {{labels.name_pluralized}}</span>
+				<span class="pagination-links">
+					<a class="first-page" title="Go to the first page" href="{{#links}}{{first_page}}{{/links}}">«</a>
+					<a class="prev-page" title="Go to the previous page" href="{{#links}}{{prev_page}}{{/links}}">‹</a>
+					<span class="paging-input">
+						<input class="current-page" title="Current page" type="text" name="paged" value="{{currentPage}}" size="1"> {{labels.of}} <span class="total-pages">{{pageCount}}</span>
+					</span>
+					<a class="next-page" title="Go to the next page" href="{{#links}}{{next_page}}{{/links}}">›</a>
+					<a class="last-page" title="Go to the last page" href="{{#links}}{{last_page}}{{/links}}">»</a>
+				</span>
+			</div>
+			<br class="clear">
+		</div>
+		
+		<!-- pati tabula -->
+		<table class="wp-list-table widefat fixed posts" cellspacing="0">
+			<thead>
+				<tr>
+					{{#has-bulkActions}}
+					<th scope="col" id="cb" class="manage-column column-cb check-column" style="">
+						<label class="screen-reader-text" for="cb-select-all-1">Select All</label>
+						<input id="cb-select-all-1" type="checkbox">
+					</th>
+					{{/has-bulkActions}}
+					
+					{{#tableHeader}}
+					
+						{{#sort}}
+						<th scope="col" id="column-{{field}}" class="manage-column column-title sortable {{order}}" style="">
+							<a href="{{link}}">
+								<span>{{title}}</span>
+								<span class="sorting-indicator"></span>
+							</a>
+						</th>
+						{{/sort}}
+						{{^sort}}
+							<th scope="col" id="column-{{field}}" class="manage-column column-{{field}}" style="">{{title}}</th>
+						{{/sort}}
+					{{/tableHeader}}
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					{{#has-bulkActions}}
+					<th scope="col" id="cb" class="manage-column column-cb check-column" style="">
+						<label class="screen-reader-text" for="cb-select-all-1">Select All</label>
+						<input id="cb-select-all-1" type="checkbox">
+					</th>
+					{{/has-bulkActions}}
+					{{#tableHeader}}
+					<th scope="col" id="column-{{field}}" class="manage-column column-{{field}}" style="">{{title}}</th>
+					{{/tableHeader}}
+				</tr>
+			</tfoot>
+			<!-- tabulas saturs -->
+			<tbody id="the-list">
+				{{#items}}
+				<tr id="post-1" class="post-1 type-post status-publish format-standard hentry iedit author-self level-0 {{#uneven}}alternate{{/uneven}}" valign="top">
+					{{#has-bulkActions}}
+					<th scope="row" class="check-column">
+						<input id="cb-select-{{rowid}}" type="checkbox" name="post[]" value="{{rowid}}">
+						<div class="locked-indicator"></div>
+					</th>
+					{{/has-bulkActions}}
+					{{#fields}}
+					<td class="{{field}} column-{{field}}">{{{value}}}</td>
+					{{/fields}}
+				</tr>
+				{{/items}}
+			</tbody>
+		</table>
+	<!-- lietas, kas ir zem tabulas -->
+	<div class="tablenav bottom">
+		{{#has-bulkActions}}
+		<div class="alignleft actions bulkactions">
+			<select name="action">
+				<option value="-1" selected="selected">{{labels.bulk_actions}}</option>
+				{{#bulkActions}}
+					<option value="{{key}}">{{title}}</option>
+				{{/bulkActions}}
+				</select>
+				<input type="submit" name="" id="doaction" class="button action" value="{{labels.apply}}">
+		</div>
+		{{/has-bulkActions}}
+		<div class="alignleft actions"></div>
+		<!-- paginācija -->
+		<div class="tablenav-pages">
+			<span class="displaying-num">{{count}} {{labels.name_pluralized}}</span>
+			<span class="pagination-links">
+				<a class="first-page" title="Go to the first page" href="{{#links}}{{first_page}}{{/links}}">«</a>
+				<a class="prev-page" title="Go to the previous page" href="{{#links}}{{prev_page}}{{/links}}">‹</a>
+				<span class="paging-input">
+					<input class="current-page" title="Current page" type="text" name="paged" value="{{currentPage}}" size="1"> {{labels.of}} <span class="total-pages">{{pageCount}}</span>
+				</span>
+				<a class="next-page" title="Go to the next page" href="{{#links}}{{next_page}}{{/links}}">›</a>
+				<a class="last-page" title="Go to the last page" href="{{#links}}{{last_page}}{{/links}}">»</a>
+			</span>
+		</div>
+		<br class="clear">
+	</div>
+
+</form>
+<br class="clear">
+</div>
